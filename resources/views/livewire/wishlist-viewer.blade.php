@@ -1,11 +1,11 @@
 <div>
 
-    <div class="flex-grow mt-2 mb-4">
-        <button class="btn btn-primary btn-sm my-2" wire:click="set_filter(0)">
+    <div class="flex-grow mt-2 mb-4 ">
+        <button class="btn btn-primary btn-sm my-2 text-base-100" wire:click="set_filter(0)">
             Все
         </button>
         @foreach(\App\Models\Category::all() as $category)
-            <button class="btn btn-primary btn-sm my-2" wire:click="set_filter({{$category->id}})">
+            <button class="btn btn-primary text-base-100 btn-sm my-2" wire:click="set_filter({{$category->id}})">
                 {{$category->name}}
             </button>
         @endforeach

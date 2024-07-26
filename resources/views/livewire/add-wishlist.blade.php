@@ -2,7 +2,7 @@
     <form wire:submit="save" class="form-control mb-4">
         <label>
             <input type="text" class="input input-bordered w-full mt-4" placeholder="Ссылка на товар"
-                   wire:model.live="link"/>
+                   wire:model="link"/>
         </label>
 
         {{--        <button type="submit" class="btn btn-md w-full">--}}
@@ -22,7 +22,7 @@
         </div>
         <div class="mt-4">
             <label>
-                <select wire:model.live="category_id" class="select w-full select-bordered">
+                <select wire:model="category_id" class="select w-full select-bordered">
                     <option  value=""></option>
 
                     @foreach(\App\Models\Category::all() as $category)
@@ -39,7 +39,7 @@
 
 
         <div class="mt-4">
-            <button type="submit" class="btn btn-primary btn-md w-full">
+            <button type="submit" class="btn btn-primary btn-md w-full text-base-100 @if(is_null($this->photo)) btn-disabled @endif">
                 Добавить
             </button>
         </div>

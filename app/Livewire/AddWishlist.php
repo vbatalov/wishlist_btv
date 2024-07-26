@@ -5,7 +5,6 @@ namespace App\Livewire;
 use AllowDynamicProperties;
 use App\Http\Controllers\Wishlist\Add;
 use App\Models\Wishlist;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -13,13 +12,10 @@ use Livewire\WithFileUploads;
 {
     use WithFileUploads;
 
-    #[Validate(['required'])]
     public string $link;
 
-    #[Validate(['required'])]
     public string $name;
 
-    #[Validate(['required'])]
     public int $category_id;
 
     public Wishlist $wishlist;
@@ -54,11 +50,14 @@ use Livewire\WithFileUploads;
 
 //        dd($this->photo);
 //
-//        $this->validate([
-//            "name" => "required",
-//            "link" => "required",
-//            "photo" => "required|image",
-//        ]);
+        $this->validate([
+            "name" => "required",
+            "link" => "required",
+            "photo" => [
+                "image", "required",
+            ],
+            "category_id" => "required"
+        ]);
 
         $upload_photo = $this->photo->store("public");
 
