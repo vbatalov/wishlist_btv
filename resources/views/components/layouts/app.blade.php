@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wishlist - Batalov Family</title>
+    @vite('resources/css/app.css')
+    <title>Document</title>
+</head>
+<body class="min-h-screen">
+
+<div class="w-full p-6 border-b-[1px] border-base-300 bg-base-200 fixed top-0 z-10 glass  opacity-95 ">
+    <span class="uppercase font-black tracking-widest">
+        Wish list | Batalov Family
+    </span>
+</div>
+<div class="p-2 pb-32 pt-24 ">
+    <div class="flex-grow-0 my-4">
+        <button class="btn btn-primary btn-sm">
+            Одежда
+        </button>
+        <button class="btn btn-primary btn-sm ">
+            Детская комната
+        </button>
+        <button class="btn btn-primary btn-sm">
+            Другое
+        </button>
+    </div>
+    <div>
+        {{$slot}}
+    </div>
+</div>
+
+
+</body>
+</html>
