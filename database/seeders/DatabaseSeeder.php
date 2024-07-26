@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             ],
         );
 
-        Wishlist::factory(10)->create();
+//        Wishlist::factory(10)->create();
 
     }
 }

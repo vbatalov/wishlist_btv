@@ -12,9 +12,12 @@
 <body class="min-h-screen">
 
 <div class="w-full p-6 border-b-[1px] border-base-300 bg-base-200 fixed top-0 z-10 glass  opacity-95 ">
+    <a href="{{route("wishlist-viewer")}}">
+
     <span class="uppercase font-black tracking-widest">
         Wish list | Batalov Family
     </span>
+    </a>
 </div>
 <div class="p-2 pb-32 pt-20 ">
 
