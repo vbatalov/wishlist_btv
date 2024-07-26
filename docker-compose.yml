@@ -5,15 +5,17 @@ services:
         image: nginx:latest
         ports:
             - "8080:80"
+            - "443:443"
         volumes:
             - ./:/var/www
             - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
-        environment:
-            - NGINX_HOST=wishlist.fgislk.com
-            - NGINX_PORT=80
+            - ./data/certbot/conf:/etc/letsencrypt
+            - ./data/certbot/www:/var/www/certbot
         depends_on:
             - app
         container_name: nginx
+        networks:
+            - nginx_net
 
     app:
         build:
@@ -22,6 +24,21 @@ services:
         volumes:
             - ./:/var/www
         container_name: app
+        networks:
+            - nginx_net
+
+    certbot:
+        container_name: certbot
+        image: certbot/certbot
+        volumes:
+            - ./data/certbot/conf:/etc/letsencrypt
+            - ./data/certbot/www:/var/www/certbot
+        entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+
+networks:
+    nginx_net:
+        external: false
 
 #    database:
 #        image: postgres:16.3
