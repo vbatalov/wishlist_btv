@@ -25,8 +25,6 @@ COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
 ADD . /var/www/wishlist
 RUN chown -R www-data:www-data /var/www/wishlist
-RUN chown -R www-data:www-data /var/www/wishlist/storage
-RUN chown -R www-data:www-data /var/www/wishlist/database
 
 #Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
