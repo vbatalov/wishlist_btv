@@ -5,7 +5,6 @@ services:
         image: nginx:latest
         ports:
             - "8080:80"
-            - "8443:443"
         volumes:
             - ./:/var/www
             - ./_docker/nginx/conf.d/:/etc/nginx/conf.d
