@@ -23,7 +23,7 @@ RUN npm install npm@latest -g && \
 
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
-ADD . /var/www
+ADD . /var/www/wishlist
 RUN chown -R www-data:www-data /var/www
 
 #Install composer
