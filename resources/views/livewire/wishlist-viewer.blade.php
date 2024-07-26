@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="fixed bottom-0 left-0 w-full p-4 opacity-95 bg-base-200 border-base-300 border-t-[1px]">
+    <div class="fixed bottom-0 left-0 w-full p-6 opacity-95 bg-base-200 border-base-300 border-t-[1px]">
         <div class="flex justify-center ">
             <div>
                 <label id="" class="swap swap-flip ">
