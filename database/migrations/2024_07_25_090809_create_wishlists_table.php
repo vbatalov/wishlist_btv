@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("image")->default("https://media.istockphoto.com/id/1396814518/ru/векторная/изображение-скоро-появится-нет-фотографии-нет-миниатюры-изображения-векторная-иллюстрация.jpg?s=1024x1024&w=is&k=20&c=JtLw6-VQd2n9yLt8FMYgJxESm6xZlIyuEzfzHJo9rd8=");
             $table->string("name")->nullable();
             $table->string("link")->nullable();
+            $table->foreignId("category_id")->constrained("categories");
             $table->date("expires_at")->nullable();
             $table->timestamps();
         });

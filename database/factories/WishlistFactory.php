@@ -18,7 +18,8 @@ class WishlistFactory extends Factory
     {
         return [
             "name" => fake("ru")->title,
-            "link" => "https://ozon.ru/"
+            "link" => "https://ozon.ru/",
+            "category_id" => rand(1,3),
         ];
     }
 }

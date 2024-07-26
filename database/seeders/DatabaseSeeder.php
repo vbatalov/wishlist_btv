@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Wishlist;
-use Database\Factories\WishlistFactory;
 use Illuminate\Database\Seeder;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +23,24 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
+
+        Category::create(
+            [
+                "name" => 'Одежда'
+            ],
+        );
+        Category::create(
+            [
+                "name" => 'Детская комната'
+            ],
+        );
+        Category::create(
+            [
+                "name" => 'Другое'
+            ],
+        );
+
         Wishlist::factory(10)->create();
+
     }
 }

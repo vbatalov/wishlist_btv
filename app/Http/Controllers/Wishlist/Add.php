@@ -32,19 +32,19 @@ class Add
 
             return $wishlist;
 
-            $wishlist->updateOrCreate(
-                [
-                    "link" => $wishlist->link,
+//            $wishlist->updateOrCreate(
+//                [
+//                    "link" => $wishlist->link,
+//
+//                ],
+//                [
+//                    "name" => Str::excerpt($info->title, null, [
+//                        "radius" => 36
+//                    ]),
+//                    "image" => $info->image
+//                ]);
 
-                ],
-                [
-                    "name" => Str::excerpt($info->title, null, [
-                        "radius" => 36
-                    ]),
-                    "image" => $info->image
-                ]);
-
-            return true;
+//            return true;
         } catch (RequestException|NetworkException) {
             return false;
         }

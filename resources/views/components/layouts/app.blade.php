@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Wishlist - Batalov Family</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Document</title>
 </head>
 <body class="min-h-screen">
@@ -16,18 +16,8 @@
         Wish list | Batalov Family
     </span>
 </div>
-<div class="p-2 pb-32 pt-24 ">
-    <div class="flex-grow-0 my-4">
-        <button class="btn btn-primary btn-sm">
-            Одежда
-        </button>
-        <button class="btn btn-primary btn-sm ">
-            Детская комната
-        </button>
-        <button class="btn btn-primary btn-sm">
-            Другое
-        </button>
-    </div>
+<div class="p-2 pb-32 pt-20 ">
+
     <div>
         {{$slot}}
     </div>
