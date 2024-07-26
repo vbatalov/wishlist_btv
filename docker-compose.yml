@@ -21,20 +21,3 @@ services:
         volumes:
             - ./:/var/www
         container_name: app
-
-
-
-
-#    database:
-#        image: postgres:16.3
-#        restart: always
-#        shm_size: 128mb
-#        volumes:
-#            - ./tmp/db:/var/lib/postgresql
-#        environment:
-#            POSTGRES_USER: root
-#            POSTGRES_PASSWORD: root
-#            POSTGRES_DB: test_db
-#        ports:
-#            - "8001:5432"
-#        container_name: pgsql
