@@ -9,7 +9,8 @@ export default defineConfig({
         }),
     ],
     server: {
-        https: true,
-        host: 'wishlist.fgislk.com',
+        hmr: {
+            host: 'wishlist.fgislk.com',
+        },
     },
 });
