@@ -13,7 +13,7 @@
 
     <div class="grid grid-cols-{{$this->row}} gap-2">
         @foreach($items as $item)
-            <x-card :$item/>
+            <x-card :$item :col="$this->row"/>
         @endforeach
 
     </div>
@@ -40,9 +40,9 @@
                         </svg>
 
                     </div>
-{{--                    <div class="contents content-center">--}}
-{{--                        Вид--}}
-{{--                    </div>--}}
+                    {{--                    <div class="contents content-center">--}}
+                    {{--                        Вид--}}
+                    {{--                    </div>--}}
                 </label>
 
             </div>
@@ -65,22 +65,6 @@
 
     </div>
 
-    <script>
-        let buttonChangeRow = document.getElementById('changeRow');
-
-        buttonChangeRow.addEventListener('click', () => {
-            console.log({{$col ?? null}});
-
-            @php
-                //                $col = $col == 1 ? 2:1;
-                            $col = 2;
-            @endphp
-            console.log({{$col ?? null}});
-
-
-        })
-
-
-    </script>
+    
 </div>
 

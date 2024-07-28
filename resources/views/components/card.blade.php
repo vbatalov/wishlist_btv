@@ -8,7 +8,7 @@
         <img
             src="{{\Illuminate\Support\Facades\Storage::url($item->image)}}"
             alt="Shoes"
-            class="w-fit"
+            class=" w-full @if($col == 2) max-h-64 object-cover  @endif "
         />
     </figure>
     <div class="card-body p-4">

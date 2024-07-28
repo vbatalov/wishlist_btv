@@ -10,7 +10,7 @@ export default defineConfig({
     ],
     server: {
         hmr: {
-            host: 'wishlist.fgislk.com',
+            // host: 'wishlist.fgislk.com',
         },
     },
 });

@@ -12,7 +12,7 @@ class card extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct(private readonly Wishlist $item)
+    public function __construct(private readonly Wishlist $item, private readonly int $col = 2)
     {
     }
 
@@ -23,7 +23,8 @@ class card extends Component
     {
         return view('components.card',
         [
-            "item" => $this->item
+            "item" => $this->item,
+            "col" => $this->col
         ]);
     }
 }
